@@ -2,7 +2,7 @@ from hdl_utils import *
 
 def gen_clu_complex(m,g,r,outpath="clu_complex.sv"):
 
-	outfile = open(outpath,'w')
+	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
 	outfile.write(gen_description("clu_complex","Comparison Logic Unit","clu"))
 

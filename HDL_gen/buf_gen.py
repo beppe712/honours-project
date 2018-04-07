@@ -2,7 +2,7 @@ from hdl_utils import *
 
 def gen_buf(m,g,r,str_len,outpath="buffer.sv",sim=False):
 
-	outfile = open(outpath,'w')
+	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
 	outfile.write(gen_description("buffer","String and Pattern buffer","None"))
 

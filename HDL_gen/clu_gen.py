@@ -20,7 +20,7 @@ def gen_cbg(m,g):
 
 
 def gen_clu(m,g,outpath="clu.sv"):
-	outfile = open(outpath,'w')
+	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
 	outfile.write(gen_description("clu","Comparison Logic Unit","None"))
 

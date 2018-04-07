@@ -2,7 +2,7 @@ import sys
 from random import randint
 
 def gen_rand_dna(str_len, file_name):
-	outfile = open(file_name,'w')
+	outfile = open(file_name,'w+')
 
 	alphabet = ['A','C','G','T']
 	string = ""

@@ -2,7 +2,7 @@ from hdl_utils import *
 
 def gen_ssd_wrapper(r,outpath="vivado-project/vivado-project.srcs/sources_1/imports/HDL_gen/ssd_wrapper.sv"):
 
-	outfile = open(outpath,'w')
+	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
 	outfile.write(gen_description("ssd_wrapper","Two Seven Segment Display Wrapper","ssd_driver"))
 

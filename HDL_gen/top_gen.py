@@ -2,7 +2,7 @@ from hdl_utils import *
 
 def gen_top(m,g,r,outpath="top.sv"):
 
-	outfile = open(outpath,'w')
+	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
 	outfile.write(gen_description("top","Top level module","clu, clu_complex, buffer, ssd_driver, ssd_wrapper"))
 

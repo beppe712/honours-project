@@ -10,7 +10,7 @@ def make_bin(stringfpath, outpath, m=0, g=0, r=0):
 	if not check_string(string):
 		print('The string contains an invalid character')
 
-	outfile = open(outpath, 'w')
+	outfile = open(outpath, 'w+')
 	bin_list = gen_bin_string(string)
 	str_len = len(bin_list)
 

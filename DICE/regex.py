@@ -6,7 +6,7 @@ from utils import *
 # Print
 def print_matches(matches, resultpath):
 	if resultpath:
-		resultfile = open(resultpath, 'w')
+		resultfile = open(resultpath, 'w+')
 	if not matches:
 		print("No matches found")
 		return
