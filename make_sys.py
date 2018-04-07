@@ -5,11 +5,21 @@ from HDL_gen.clu_gen import gen_clu
 from HDL_gen.ssd_wrapper_gen import gen_ssd_wrapper
 from HDL_gen.top_gen import gen_top
 
+import os
+import errno
 import sys
 from subprocess import call
 
 strings_path = "vivado-project/vivado-project.srcs/sources_1/imports/HDL_gen/"
 hdl_path = "vivado-project/vivado-project.srcs/sources_1/imports/HDL_gen/"
+
+for path in [strings_path,hdl_path]:
+	if not os.path.exists(path):
+		try:
+			os.makedirs(path)
+		except OSError as exc:
+			if exc.errno != errno.EEXIST:
+				raise
 
 def make_sys(string_file, pat_file, g, r):
 
