@@ -11,4 +11,13 @@ vivado-project/vivado-project.hw/*
 vivado-project/vivado-project.runs/*
 vivado-project/vivado-project.sim/*
 vivado-project/vivado-project.srcs/sim_1/*
+vivado-project/vivado-project.srcs/sim_2/*
+vivado-project/vivado-project.srcs/sim_3/*
+vivado-project/vivado-project.srcs/sim_4/*
 vivado-project/vivado-project.srcs/sources_1/imports/*
+images/*
+fpga-accelerated-search.pdf
+sim2/*
+sim3/*
+sim4/*
+

@@ -47,7 +47,7 @@ def make_bin(stringfpath, outpath, m=0, g=0, r=0):
 # Main
 def main():
 	stringfpath = sys.argv[1]
-	outpath = "vivado-project/vivado-project.srcs/sources_1/imports/DICE/string.list"
+	outpath = "string.list"
 	m = int(raw_input("Insert length of the pattern: "))
 	g = int(raw_input("Insert maximum gap parameter: "))
 	r = int(raw_input("Insert number of CLUs: "))

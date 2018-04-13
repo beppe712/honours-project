@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company:         The University of Edinburgh
-// Engineer:        Nigel Topham
+// Engineer:        Nigel Topham, Giuseppe Li
 //
-// Create Date:     17.09.2015 12:36:42
-// Design Name:     Practical 2
+// Create Date:     18.03.2018 12:36:42
+// Design Name:     FPGA accelerator for DNA pattern matching
 // Module Name:     ssd_driver
-// Project Name:    Computer Design
+// Project Name:    4th Year Honours Project (BSc (Hons) Artificial Intelligence and Computer Science)
 // Target Devices:  Zync-7010
 // Tool Versions:   2015.2
 // Description:     Module to drive a seven-segment display from 8-bit integer
@@ -21,8 +21,6 @@
 
 
 module ssd_driver(
-    input           clk,
-    input           reset,
     input           done,
     input  [7:0]    ssd_input,
 	input			ssd_c,
@@ -48,13 +46,7 @@ localparam CHARLIE  = 7'h39; // C
 localparam DELTA    = 7'h5e; // d
 localparam ECHO     = 7'h79; // E
 localparam FOXTROT  = 7'h71; // F
-localparam DASH     = 7'h40; // -t
-
-// Define the decoding from a 4-bit unsigned binary integer to the two
-// digits of a seven segment display. This requires 14 bits of output,
-// one for each of the seven segments of the two digits. This decoding
-// therefore also splits binary numbers into two hexadecimal digits as
-// an implicit side effect of the mapping to the SSD.
+localparam DASH     = 7'h40; // -
 
 reg [13:0] ssd_segments;
 

@@ -10,7 +10,7 @@
     <Option Name="Part" Val="xc7z010clg400-3"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
-    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="ActiveSimSet" Val="sim_2"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
@@ -24,14 +24,12 @@
           <Attr Name="ImportTime" Val="1522791193"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/ssd_driver.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL_gen/buffer.sv">
@@ -40,7 +38,6 @@
           <Attr Name="ImportTime" Val="1522791193"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL_gen/clu_complex.sv">
@@ -49,7 +46,6 @@
           <Attr Name="ImportTime" Val="1522791193"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL_gen/ssd_wrapper.sv">
@@ -58,7 +54,6 @@
           <Attr Name="ImportTime" Val="1522791193"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL_gen/top.sv">
@@ -67,7 +62,6 @@
           <Attr Name="ImportTime" Val="1522791193"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL_gen/pat.list">
@@ -147,8 +141,160 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="NLNetlistMode" Val="funcsim"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_2" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_2">
+      <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../sim2/clu.sv">
+        <FileInfo RelPath="clu.sv">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sim2/buffer.sv">
+        <FileInfo RelPath="buffer.sv">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sim2/clu_complex.sv">
+        <FileInfo RelPath="clu_complex.sv">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_2/new/testbench.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_2/imports/sim2/pat.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim2/pat.list"/>
+          <Attr Name="ImportTime" Val="1523520430"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_2/imports/sim2/string.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim2/string.list"/>
+          <Attr Name="ImportTime" Val="1523522740"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="testbench"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.runtime" Val="60s"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_3" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_3">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_3/imports/sim3/clu.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim3/clu.sv"/>
+          <Attr Name="ImportTime" Val="1523519400"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_3/imports/sim3/clu_complex.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim3/clu_complex.sv"/>
+          <Attr Name="ImportTime" Val="1523519393"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_3/imports/sim3/buffer.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim3/buffer.sv"/>
+          <Attr Name="ImportTime" Val="1523520606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_3/imports/sim3/string.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim3/string.list"/>
+          <Attr Name="ImportTime" Val="1523520391"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_3/imports/sim3/pat.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim3/pat.list"/>
+          <Attr Name="ImportTime" Val="1523520449"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="clu_complex"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_4" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_4">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_4/imports/sim4/clu.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim4/clu.sv"/>
+          <Attr Name="ImportTime" Val="1523519428"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_4/imports/sim4/clu_complex.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim4/clu_complex.sv"/>
+          <Attr Name="ImportTime" Val="1523519451"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_4/imports/sim4/buffer.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim4/buffer.sv"/>
+          <Attr Name="ImportTime" Val="1523520621"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_4/imports/sim4/string.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim4/string.list"/>
+          <Attr Name="ImportTime" Val="1523520376"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_4/imports/sim4/pat.list">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../sim4/pat.list"/>
+          <Attr Name="ImportTime" Val="1523520463"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="clu_complex"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
   </FileSets>

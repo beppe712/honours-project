@@ -1,6 +1,6 @@
 from hdl_utils import *
 
-def gen_ssd_wrapper(r,outpath="vivado-project/vivado-project.srcs/sources_1/imports/HDL_gen/ssd_wrapper.sv"):
+def gen_ssd_wrapper(r,outpath="ssd_wrapper.sv"):
 
 	outfile = open(outpath,'w+')
 	outfile.write(gen_heading())
@@ -10,7 +10,6 @@ def gen_ssd_wrapper(r,outpath="vivado-project/vivado-project.srcs/sources_1/impo
 
 module ssd_wrapper(
 	input 			CLK,
-	input 			RESET,
 	input 			DONE,
 	input 	[{}:0]	OUT,
 	output 	[6:0]	SSD_A[1:0],
@@ -60,8 +59,6 @@ module ssd_wrapper(
 		for (ssdNo = 0; ssdNo < 2; ssdNo = ssdNo + 1)
 		begin: SSDInstantiation
 			ssd_driver u_ssd_driver (
-				.clk 		(CLK),
-				.reset 		(RESET),
 				.done 		(DONE),
 				.ssd_input 	(digits[(ssdNo * 8)+7 : (ssdNo * 8)]),
 				.ssd_c 		(SSD_C),

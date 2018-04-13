@@ -48,7 +48,6 @@ module top(
 
     ssd_wrapper u_ssd_wrapper(
     	.CLK    (CLK),
-        .RESET  (RESET),
         .DONE	(DONE),
         .OUT 	(OUT),
         .SSD_A 	({{SSD_A_1, SSD_A_0}}),
